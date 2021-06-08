@@ -1,4 +1,4 @@
-const CACHE_NAME = "tuinformaticoencasa::v7.0";
+const CACHE_NAME = "tuinformaticoencasa::v7.1";
 const FILES_TO_CACHE = [
   '/',
   '/index.js',
