@@ -1,18 +1,15 @@
-const CACHE_NAME = "amanias::v5.2";
+const CACHE_NAME = "tuinformaticoencasa::v7.0";
 const FILES_TO_CACHE = [
   '/',
-  '/doc/cv.pdf',
-  '/doc/sepe.pdf',
-  '/doc/upm.pdf',  
-  '/img/apple-152x152.png',
-  '/img/contacto.svg',
+  '/index.js',
+  '/doc/google.pdf',
+  '/img/apple-152x152.png',  
   '/img/icono.png',
-  '/img/maskable_icon.png',  
-  '/img/opengraph.png',
+  '/img/maskable_icon.png',
+  '/img/opengraph.jpg',
   '/img/portada.svg',
   '/index.css',
   '/index.html',
-  '/index.js',
   '/manifest.json'
 ];
 

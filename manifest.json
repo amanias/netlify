@@ -1,6 +1,6 @@
 {
-	"name": "Curriculum Vitae de Alberto Mañas",
-	"short_name": "Alberto Mañas",
+	"name": "Pide Tu Informático en Casa",
+	"short_name": "Tu Informático en Casa",
 	"lang": "es-ES",
 	"start_url": "/index.html",
 	"display": "standalone",
@@ -9,7 +9,7 @@
 	"icons": [
 		{
 			"src": "img/maskable_icon.png",
-			"sizes": "1024x1024",
+			"sizes": "400x400",
 			"type": "image/png",
 			"purpose": "any maskable"
 		}

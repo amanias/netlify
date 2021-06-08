@@ -1,348 +1,344 @@
 html {
-    word-break     : break-word;
-    scroll-behavior: smooth;
-    text-rendering : optimizeLegibility;
-    font-size      : 100%;
-    text-align     : center;
+  word-break     : break-word;
+  scroll-behavior: smooth;
+  text-rendering : optimizeLegibility;
+  font-size      : 100%;
+  text-align     : center;
 }
 
 *,
 ::before,
 ::after {
-    margin        : 0;
-    padding       : 0;
-    border        : 0;
-    outline       : 0;
-    vertical-align: baseline;
-    box-sizing    : border-box;
+  margin        : 0;
+  padding       : 0;
+  border        : 0;
+  outline       : 0;
+  vertical-align: baseline;
+  box-sizing    : border-box;
 }
 
 body {
-    overflow        : hidden;
-    overflow-wrap   : break-word;
-    font-variant    : small-caps;
-    font-weight     : 400;
-    font-style      : normal;
-    background-color: #336699;
-    color           : white;
+  overflow        : hidden;
+  overflow-wrap   : break-word;
+  font-variant    : small-caps;
+  font-weight     : 400;
+  font-style      : normal;
+  background-color: #336699;
+  color           : #666;
 }
 
 ::selection {
-    background-color: #336699;
-    color           : white;
-    text-shadow     : 0 0 0 transparent;
+  background-color: #336699;
+  color           : white;
+  text-shadow     : 0 0 0 transparent;
 }
 
 h2,
 h3 {
-    margin-bottom: 1rem;
-}
-
-h4 {
-    margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 img {
-    max-width: 300px;
-    width    : 96%;
-    margin   : 0 auto;
-    border   : whitesmoke double 0.8rem;
+  width    : 96%;
+  margin   : 0 auto;
+  border   : whitesmoke double 0.8rem;
 }
 
-img:hover {
-    opacity: 0.7;
-}
-
-a {
-    color          : white;
-    text-decoration: none;
+img:hover,
+.boton:hover {
+  opacity: 0.7;
 }
 
 #awp {
-    position       : absolute;
-    top            : 0;
-    left           : 0;
-    bottom         : 0;
-    right          : 0;
-    z-index        : 1;
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
+  position       : absolute;
+  top            : 0;
+  left           : 0;
+  bottom         : 0;
+  right          : 0;
+  z-index        : 1;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
 }
 
 #aplicacion {
-    position        : absolute;
-    top             : 0;
-    left            : 0;
-    bottom          : 0;
-    right           : 0;
-    background-color: #336699;
-    z-index         : 2;
-    display         : flex;
-    flex-direction  : column;
-    justify-content : space-around;
-    align-items     : center;
-    padding         : 2%;
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  bottom          : 0;
+  right           : 0;
+  background-color: white;
+  z-index         : 2;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+  align-items     : center;
+  padding         : 2%;
 }
 
 #informacion {
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-around;
-    align-items    : center;
-    padding        : 2%;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  padding        : 2%;
+}
+
+#tarifas {
+  align-self: flex-start;
+  text-align: left;
+}
+
+#tarifas>ul {
+  list-style: none;
+}
+
+#tarifas>ul>li::before {
+  content: "\25CF\2002";
+}
+
+.boton {
+  border                    : 1px solid #115290;
+  text-shadow               : 0 -3px 0 #115290;
+  box-shadow                : 2px 3px 0 #115290;
+  background-color          : #1874cd;
+  /* No funciona, background: linear-gradient(top, #4f9eea, #1874cd); */
+  background                : linear-gradient(#4f9eea, #1874cd);
+  border-radius             : 33px;
+  text-align                : center;
+  font-weight               : bold;
+  width                     : 96%;
+  padding                   : 2%;
+  margin                    : 5% 0;
+}
+
+.boton>a {
+  text-decoration: none;
+  font-variant   : normal;
+  font-size      : 100%;
+  color          : white;
+  padding        : 0 2%;
 }
 
 #imagen {
-    display: none;
+  display           : flex;
+  flex-direction    : column;
+  justify-content   : space-around;
+  align-items       : center;
+  padding           : 2%;
+}
+
+#imagen-pie {
+  text-align  : center;
+  font-style  : italic;
+  font-weight : bold;
+  font-variant: normal;
+  font-size   : 100%;
+  padding     : 0 2% 2% 2%;
+}
+
+#imagen-pie>a {
+  color          : inherit;
+  text-decoration: none;
 }
 
 @media (orientation: landscape) {
-    body {
-        color: #666;
-    }
+  #aplicacion {
+    flex-direction  : row;
+    flex-wrap       : wrap;    
+    width           : 96%;
+    border-radius   : 1.1rem;
+    position        : relative;
+    background-color: white;
+  }
 
-    a {
-        color: #666;
-    }
-
-    h2,
-    h4 {
-        margin: 0;
-    }
-
-    h3 {
-        margin-bottom: 1rem;
-    }
-
-    img {
-        max-width: none;
-    }
-
-    #aplicacion {
-        flex-direction  : row;
-        flex-wrap       : wrap;
-        width           : 96%;
-        border-radius   : 1.1rem;
-        position        : relative;
-        background-color: white;
-    }
-
-    #informacion {
-        flex     : 50%;
-        max-width: 50%;
-    }
-
-    #imagen {
-        display        : flex;
-        flex-direction : column;
-        justify-content: space-around;
-        align-items    : center;
-        padding        : 2%;
-        flex           : 50%;
-        max-width      : 50%;
-    }
-
-    #imagen-pie {
-        text-align  : center;
-        font-style  : italic;
-        font-weight : bold;
-        font-variant: normal;
-        font-size   : 100%;
-        padding     : 0 2% 2% 2%;
-    }
-
-    #imagen-pie>a {
-        color          : inherit;
-        text-decoration: none;
-    }
+  #informacion,
+  #imagen {
+    flex     : 50%;
+    max-width: 50%;
+  }
 }
 
 @media (min-width: 720px),
 (min-height: 720px) {
-    #aplicacion {
-        width        : 96%;
-        border-radius: 1.1rem;
-        position     : relative;
-    }
+  #aplicacion {
+    width        : 96%;
+    border-radius: 1.1rem;
+    position     : relative;
+  }
 
-    body {
-        font-size: 1.4rem;
-    }
+  body {
+    font-size: 1.4rem;
+  }
 
-    #imagen-pie {
-        font-size: 1.1rem;
-    }
+  .boton>a,
+  #imagen-pie {
+    font-size: 1.1rem;
+  }
 }
 
 @media (orientation: portrait) and (max-width: 319px),
 (orientation: landscape) and (max-height: 319px) {
-    #aplicacion {
-        background-color: white;
-    }
+  img {
+    display: none;
+  }
+  .boton {
+    border                    : none;
+    text-shadow               : none;
+    box-shadow                : none;
+    background                : none;
+  }  
+  .boton>a {
+    color          : blue;
+  }
 
-    #contacto {
-        display: none;
-    }
-
-    #imagen {
-        display: none;
-    }
-
-    a {
-        color       : blue;
-        font-variant: normal;
-    }
-}
-
-@media (orientation: landscape) and (max-height: 360px) {
-    body {
-        font-size: 1rem;
-    }
-
-    h3 {
-        margin-bottom: 0.4rem;
-    }
-
-    h4 {
-        margin-top: 0.2rem;
-    }
-
-    #contacto-imagen {
-        max-width: 200px;
-    }
-
-    #imagen-pie {
-        font-size : 0.9rem;
-        margin-top: 0.2rem;
-    }
 }
 
 @media (orientation: landscape) and (max-height:480px) {
-    body {
-        font-size: 1rem;
-    }
 
-    h3 {
-        margin-bottom: 0.8rem;
-    }
-
-    h4 {
-        margin-top: 0.4rem;
-    }
-
-    #contacto-imagen {
-        max-width: 200px;
-    }
-
-    #imagen-pie {
-        font-size : 1rem;
-        margin-top: 0.4rem;
-    }
+  .boton>a,
+  #imagen-pie {
+    font-size: 0.9rem;
+  }
 }
 
 @media (orientation: portrait) and (min-width:320px) {
-    body {
-        font-size: 1.2rem;
-    }
+  body {
+    font-size: 1.2rem;
+  }
 
-    #imagen-pie {
-        font-size: 1rem;
-    }
+  .boton>a,
+  #imagen-pie {
+    font-size: 1rem;
+  }
 }
 
-@media (orientation: portrait) and (min-width:720px) {
-    body {
-        font-size: 1.4rem;
-    }
-
-    #imagen-pie {
-        font-size: 1.1rem;
-    }
+@media (orientation: portrait) and (max-height:620px) {
+  #tarifas>h3{
+    margin-bottom: 0;
+  }
 }
 
 @media (orientation: portrait) and (min-width:800px) {
-    #imagen-pie {
-        font-size: 1.2rem;
-    }
+
+  .boton>a,
+  #imagen-pie {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width:960px) {
-    body {
-        font-size: 1.7rem;
-    }
+  body {
+    font-size: 1.7rem;
+  }
 
-    #imagen-pie {
-        font-size: 1.3rem;
-    }
+  .boton>a,
+  #imagen-pie {
+    font-size: 1.3rem;
+  }
 }
 
 @media (min-width:1024px) {
-    body {
-        font-size: 1.8rem;
-    }
+  body {
+    font-size: 1.8rem;
+  }
 
-    #aplicacion {
-        max-width: 1024px;
-    }
+  #aplicacion {
+    max-width: 1024px;
+  }
 
-    #imagen-pie {
-        font-size: 1.4rem;
-    }
+  .boton>a,
+  #imagen-pie {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width:1280px) {
-    body {
-        font-size: 1.9rem;
-    }
+  body {
+    font-size: 1.9rem;
+  }
 
-    #aplicacion {
-        max-width: 1280px;
-    }
+  #aplicacion {
+    max-width: 1280px;
+  }
 
-    #imagen-pie {
-        font-size: 1.5rem;
-    }
+  #informacion {
+    flex     : 55%;
+    max-width: 55%;
+  }
+
+  #imagen {
+    flex     : 45%;
+    max-width: 45%;
+  }
+
+  .boton>a,
+  #imagen-pie {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width:1440px) {
-    body {
-        font-size: 2rem;
-    }
+  body {
+    font-size: 2rem;
+  }
 
-    #aplicacion {
-        max-width: 1440px;
-    }
+  #aplicacion {
+    max-width: 1440px;
+  }
 
-    #imagen-pie {
-        font-size: 1.6rem;
-    }
+  #informacion {
+    flex     : 60%;
+    max-width: 60%;
+  }
+
+  #imagen {
+    flex     : 40%;
+    max-width: 40%;
+  }
+
+  .boton>a,
+  #imagen-pie {
+    font-size: 1.6rem;
+  }
 }
 
 @media (min-width:1600px) {
-    body {
-        font-size: 2.2rem;
-    }
+  body {
+    font-size: 2.2rem;
+  }
 
-    #aplicacion {
-        max-width: 1600px;
-    }
+  #aplicacion {
+    max-width: 1600px;
+  }
 
-    #imagen-pie {
-        font-size: 1.8rem;
-    }
+  .boton>a,
+  #imagen-pie {
+    font-size: 1.8rem;
+  }
 }
 
 @media (min-width:1920px) {
-    body {
-        font-size: 2.5rem;
-    }
+  body {
+    font-size: 2.5rem;
+  }
 
-    #aplicacion {
-        max-width: 1920px;
-    }
+  #aplicacion {
+    max-width: 1920px;
+  }
 
-    #imagen-pie {
-        font-size: 2rem;
-    }
+  #informacion {
+    flex     : 69%;
+    max-width: 69%;
+  }
+
+  #imagen {
+    flex     : 31%;
+    max-width: 31%;
+  }
+
+  .boton>a,
+  #imagen-pie {
+    font-size: 2rem;
+  }
 }
